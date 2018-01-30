@@ -1,0 +1,2 @@
+Create a dict(hash table).
+Iterate the elements in the array. If target - element in the dict, return the index. Else add the element: index to the dict.
