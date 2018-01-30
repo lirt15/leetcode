@@ -1,6 +1,6 @@
 class Solution(object):
 	def lengthOfLongestSubstring(self,s):
-		start,cha_dict,result,tp_len=0,{},0,0
+		start,cha_dict,result=0,{},0
 		for it in range(len(s)):
 			sit=s[it]
 			if sit in cha_dict and cha_dict[sit] >=start:
