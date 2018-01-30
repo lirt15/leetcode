@@ -1,0 +1,4 @@
+scan the list
+if the element occurs after the start, update the start and not update the result.
+if the element doesnt occur before the start, update the result.
+be sure to init the result to zero.
