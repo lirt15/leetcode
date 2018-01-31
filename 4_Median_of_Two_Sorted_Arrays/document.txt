@@ -1,0 +1,3 @@
+suppose the length of two lists → m,n
+the num is the k th in m, then it must be (m+n)/2-k in n.
+this is the O(log(min(m,n)) solution with explanation
