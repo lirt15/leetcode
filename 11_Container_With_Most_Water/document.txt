@@ -1,0 +1,2 @@
+use two pointer. scan the list from head and tail separately.
+caculate the volumn, and move the pointer of smaller height(forward for head, backward for tail), since if you move the pointer of taller height, you cant get a bigger volumn.
