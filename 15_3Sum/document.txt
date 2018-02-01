@@ -1,0 +1,2 @@
+sort the list
+scan the list(i), each time def l=i+1, r=len_s-1, then use l and r find -list[i]. According to list[l] + list[r], decide how to move l and r.
