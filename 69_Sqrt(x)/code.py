@@ -5,12 +5,7 @@ class Solution(object):
 		:rtype: int
 		"""
 		if x==0:return 0
-		y=1
-		while y**2<x:
-			y=2*y
-		y2=int(y/2)
-		if y**2==x:return y
-		left,right=y2,y
+		left,right=1,x
 		while True:
 			tp=int((left+right)/2)
 			if tp**2>x:
