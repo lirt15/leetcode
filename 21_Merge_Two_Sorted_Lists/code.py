@@ -14,19 +14,11 @@ class Solution(object):
 		if l1==None and l2==None:return None
 		head2=head1=ListNode(0)
 		while l1!=None or l2!=None:
-			if l1==None:
+			if l1==None or (l1!=None and l2!=None and l1.val>l2.val):
 				head2.next=l2
 				head2=head2.next
 				l2=l2.next
-			elif l2==None:
-				head2.next=l1
-				head2=head2.next
-				l1=l1.next
-			elif l1.val>l2.val:
-				head2.next=l2
-				head2=head2.next
-				l2=l2.next
-			else:
+			elif l2==None or (l2!=None and l1!=None and l1.val<=l2.val):
 				head2.next=l1
 				head2=head2.next
 				l1=l1.next
