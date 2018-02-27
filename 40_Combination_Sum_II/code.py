@@ -1,5 +1,5 @@
 class Solution(object):
-	def combinationSum(self, candidates, target):
+	def combinationSum2(self, candidates, target):
 		"""
 		:type candidates: List[int]
 		:type target: int
@@ -9,7 +9,7 @@ class Solution(object):
 			sub_result=[]
 			for item in range(loc,len(arr)):
 				if arr[item]<tar:
-					tp=sub_array(arr,tar-arr[item],item)
+					tp=sub_array(arr,tar-arr[item],item+1)
 					for tmp in tp:
 						sub_result.append([arr[item]]+tmp)
 				elif arr[item]==tar:
@@ -17,5 +17,7 @@ class Solution(object):
 				else:
 					break
 			return sub_result
-		return sub_array(sorted(candidates),target,0)
-
+		tp = [it for it in map(lambda a:tuple(a),sub_array(sorted(candidates),target,0))]
+		tp=set(tp)
+		tp = [it for it in map(lambda a:list(a),tp)]
+		return tp 
