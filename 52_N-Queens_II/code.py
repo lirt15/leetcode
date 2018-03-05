@@ -1,7 +1,7 @@
 class Solution:
-	def solveNQueens(self, n):
+	def totalNQueens(self, n):
 		import itertools
-		result=[]
+		result=0
 		for pl in itertools.permutations(range(n),n):
 			r_c,c_r,flag={},{},True
 			for r,c in zip(range(n),pl):
@@ -11,7 +11,5 @@ class Solution:
 				else:
 					r_c[r-c],c_r[r+c]=1,1
 			if flag:
-				result.append(['.'*c+'Q'+'.'*(n-c-1) for r,c in zip(range(n),pl)])
-		return result			
-tp=Solution()
-print(tp.solveNQueens(9))
+				result+=1
+		return result	
